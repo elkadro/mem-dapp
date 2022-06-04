@@ -1,0 +1,296 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+}
+div,h1,h2,h3,button {
+  border: 0;
+}
+html {
+  font-family: Generalsans, sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 3.28em;
+  line-height: 1.4;
+  font-weight: 700;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -2;
+}
+
+@media screen and (max-width: 1535px) {
+  .background-video {
+    object-fit: cover; width: 100vw; height: 100vh; position: fixed; top: 0; left: 0;
+  }
+}
+@media screen and (min-width: 1536px) {
+  .background-video {
+    width: 100%;
+  }
+}
+.header {
+  width: 100%;
+  padding-top: 1.9em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
+.header-text {
+  font-family: Generalsans, sans-serif;
+  color: hsla(0, 0%, 100%, 0.82);
+  font-size: 1.5em;
+  line-height: 1.3;
+  font-weight: 500;
+  max-width: 250px;
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .header-text {
+    display: none;
+  }
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.logo {
+  width: 250px;
+}
+.highlight-yellow {
+  color: #e6b340;
+}
+.display.minting {
+  font-size: 55px;
+  text-align: center;
+}
+
+.display {
+  font-family: Panchang, sans-serif;
+  line-height: 0.81;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1024px) {
+  .display {
+    margin-top: 20px;
+  }
+}
+.videooverlay {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgba(255, 47, 47, 0);
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#000),
+    to(transparent)
+  );
+  background-image: linear-gradient(180deg, #000, transparent);
+}
+
+.mint-card {
+  width: 850px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-radius: 17px;
+  background-color: rgba(0, 0, 0, 0.62);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+.margin-top-50 {
+  margin-top: 50px;
+}
+.mint-card-img {
+  width: 50%;
+}
+.mint-container {
+  display: flex;
+}
+.copyright {
+  margin-top: 40px;
+  font-family: Generalsans, sans-serif;
+  color: hsla(0, 0%, 100%, 0.82);
+  font-size: 25px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1024px) {
+  .copyright {
+    font-size: 15px;
+  }
+}
+.mint-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .mint-card {
+    width: 100%;
+    flex-direction: column;
+  }
+  .mint-card-img {
+    width: 100%;
+  }
+  .mint-card-wrapper {
+    width: 100%;
+  }
+}
+.mint-card-title {
+  margin-top: 50px;
+  font-size: 36px;
+  line-height: 0.8;
+  text-align: center;
+  font-family: Panchang, sans-serif;
+  text-transform: uppercase;
+}
+.mint-card-amount-wrapper {
+  margin-top: 40px;
+  padding: 0 36px 0 36px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.mint-card-amount-wrapper button {
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  border-radius: 100%;
+  background-color: hsla(0, 0%, 100%, 0.18);
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  cursor: pointer;
+  color: white;
+  font-size: 40px;
+  line-height: 40px;
+  border: 0;
+}
+.mint-card-amount-wrapper button:hover {
+  background-color: hsla(0, 0%, 100%, 0.54);
+}
+.mint-card-amount-wrapper .number {
+  width: 194px;
+  font-size: 46px;
+  font-weight: 700;
+  color: white;
+  font-family: Panchang, sans-serif;
+}
+.mint-amount-numeric-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.mint-max-text {
+  margin-top: 20px;
+}
+.mint-card-price-text {
+  margin-top: 0.6em;
+  font-family: Generalsans, sans-serif;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  text-transform: none;
+  font-size: 30px;
+  line-height: 1.3;
+}
+.mint-card-price-text-main {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+.mint-card-button {
+  color: white;
+  margin-top: 1.1em;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Panchang, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 3.47em;
+  padding: 9px 2em 9px 2em;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .mint-card-title {
+    font-size: 24px;
+  }
+  .mint-card-button {
+    font-size: 15px;
+  }
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('./fonts/Panchang-Bold.woff2') format('woff2'), url('./fonts/Panchang-Bold.eot') format('embedded-opentype'), url('./fonts/Panchang-Bold.woff') format('woff'), url('./fonts/Panchang-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Generalsans';
+  src: url('./fonts/GeneralSans-Semibold.woff2') format('woff2'), url('./fonts/GeneralSans-Semibold.eot') format('embedded-opentype'), url('./fonts/GeneralSans-Semibold.woff') format('woff'), url('./fonts/GeneralSans-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Generalsans';
+  src: url('./fonts/GeneralSans-Medium.woff2') format('woff2'), url('./fonts/GeneralSans-Medium.eot') format('embedded-opentype'), url('./fonts/GeneralSans-Medium.woff') format('woff'), url('./fonts/GeneralSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
