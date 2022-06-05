@@ -1,6 +1,7 @@
 import logo from './logo.svg'
 import './App.css'
 import MintCard from './components/MintCard'
+import './polyfill'
 
 function App() {
   return (
